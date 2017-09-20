@@ -40,7 +40,7 @@ public:
   TVector  operator*(const ValType &val);   // умножить на скаляр
 
   // векторные операции
-  TVector  operator+(const TVector &v);     // сложение
+  TVector  operator+(const TVector &v);     // сложение 
   TVector  operator-(const TVector &v);     // вычитание
   ValType  operator*(const TVector &v);     // скалярное произведение
 
@@ -62,13 +62,11 @@ public:
 template <class ValType>
 TVector<ValType>::TVector(int s, int si)
 {
-	
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> //конструктор копирования
 TVector<ValType>::TVector(const TVector<ValType> &v)
 {
-
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType>
@@ -79,7 +77,7 @@ TVector<ValType>::~TVector()
 template <class ValType> // доступ
 ValType& TVector<ValType>::operator[](int pos)
 {
-	
+	return *this;
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // сравнение
