@@ -62,11 +62,13 @@ public:
 template <class ValType>
 TVector<ValType>::TVector(int s, int si)
 {
+	
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> //конструктор копирования
 TVector<ValType>::TVector(const TVector<ValType> &v)
 {
+
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType>
@@ -77,6 +79,7 @@ TVector<ValType>::~TVector()
 template <class ValType> // доступ
 ValType& TVector<ValType>::operator[](int pos)
 {
+	
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // сравнение
@@ -97,21 +100,29 @@ TVector<ValType>& TVector<ValType>::operator=(const TVector &v)
 template <class ValType> // прибавить скаляр
 TVector<ValType> TVector<ValType>::operator+(const ValType &val)
 {
+	TVector<ValType> m;
+	return m;
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // вычесть скаляр
 TVector<ValType> TVector<ValType>::operator-(const ValType &val)
 {
+	TVector<ValType> m;
+	return m;
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // умножить на скаляр
 TVector<ValType> TVector<ValType>::operator*(const ValType &val)
 {
+	TVector<ValType> m;
+	return m;
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // сложение
 TVector<ValType> TVector<ValType>::operator+(const TVector<ValType> &v)
 {
+	TVector<ValType> m;
+	return m;
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // вычитание
@@ -122,6 +133,8 @@ TVector<ValType> TVector<ValType>::operator-(const TVector<ValType> &v)
 template <class ValType> // скалярное произведение
 ValType TVector<ValType>::operator*(const TVector<ValType> &v)
 {
+	int a;
+	return a;
 } /*-------------------------------------------------------------------------*/
 
 
@@ -180,11 +193,15 @@ bool TMatrix<ValType>::operator!=(const TMatrix<ValType> &mt) const
 template <class ValType> // присваивание
 TMatrix<ValType>& TMatrix<ValType>::operator=(const TMatrix<ValType> &mt)
 {
+	TMatrix<ValType> m;
+	return m;
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // сложение
 TMatrix<ValType> TMatrix<ValType>::operator+(const TMatrix<ValType> &mt)
 {
+	TMatrix<ValType> m;
+	return m;
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // вычитание
