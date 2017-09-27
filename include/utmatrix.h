@@ -60,11 +60,11 @@ public:
 };
 
 template <class ValType>
-TVector<ValType>::TVector(int s, int si):TVector<TVector<ValType>>(s)
+TVector<ValType>::TVector(int s, int si)
 {
-   size = s;
+   Size = s;
    StartIndex = si;
-   pVector = new ValType[s];
+   pVector = new ValType[Size];
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> //конструктор копирования
