@@ -92,7 +92,7 @@ TVector<ValType>::~TVector()
 template <class ValType> // доступ
 ValType& TVector<ValType>::operator[](int pos)
 {
-	if (pos < 0 || pos > Size) throw 1;
+	if((pos < StartIndex) || (pos >= Size + StartIndex)) throw 1;
 	return pVector[pos - StartIndex];
 } /*-------------------------------------------------------------------------*/
 
@@ -163,7 +163,7 @@ TVector<ValType> TVector<ValType>::operator+(const TVector<ValType> &v)
 	if (Size != v.Size)
 		throw 1;
 
-	TVector<ValType> tmp(Size);
+	TVector<ValType> tmp(Size, StartIndex);
 	for (int i = 0; i < Size; i++) tmp.pVector[i] = pVector[i] + v.pVector[i];
 	
 	return tmp;
@@ -175,7 +175,7 @@ TVector<ValType> TVector<ValType>::operator-(const TVector<ValType> &v)
 	if (Size != v.Size)
 		throw 1;
 
-	TVector<ValType> tmp(Size);
+	TVector<ValType> tmp(Size, StartIndex);
 	for (int i = 0; i < Size; i++) tmp.pVector[i] = pVector[i] - v.pVector[i];
 	
 	return tmp;

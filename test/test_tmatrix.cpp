@@ -49,7 +49,7 @@ TEST(TMatrix, copied_matrix_has_its_own_memory)
 	TMatrix<int> b(a);
 	b[0][0] = 2;
 	
-	EXPECT_NE(a[1][1], b[1][1]);
+	EXPECT_NE(a[0][0], b[0][0]);
 }
 
 TEST(TMatrix, can_get_size)
